@@ -31,7 +31,10 @@ services:
       - node-network
 
   nginx:
-    image: dalmeilyri0/nginx-fullcycle:latest
+    build: ./nignx
+    restart: always
+    ports:
+      - "8080:80"
     volumes:
       - ./nignx:/etc/nginx
     networks:
