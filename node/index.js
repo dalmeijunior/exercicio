@@ -10,7 +10,14 @@ const config = {
 
 const mysql = require('mysql')
 const connexao = mysql.createConnection(config)
-
+connexao.connect((erro) => {
+    if (erro) {
+        console.log("Erro ao tentar conectar ao mysql")
+    }
+    else {
+        console.log("Conectado com sucesso!")
+    }
+})
 var sql = `INSERT INTO people(name) values('dalmei')`
 connexao.query(sql)
 sql = `INSERT INTO people(name) values('Junior')`
