@@ -2,7 +2,7 @@ FROM node:18-slim
 
 WORKDIR /usr/src/app
 
-COPY . /usr/src/app
+COPY . .
 
 ENV DOCKERIZE_VERSION=v0.9.3
 

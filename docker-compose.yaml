@@ -12,9 +12,10 @@ services:
       - -timeout 
       - 20s 
       - docker-entrypoint.sh
+      - npm
+      - install
       - node
       - index.js
-    command: npm install
     networks:
       - node-network
     volumes:
