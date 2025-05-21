@@ -14,4 +14,3 @@ RUN apt-get update \
 
 EXPOSE 3000
 
-# ENTRYPOINT [ "node","index.js" ]
